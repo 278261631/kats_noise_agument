@@ -286,13 +286,13 @@ def main():
         # 使用离群值检测方法
         print("\n=== 方法1: 离群值检测 ===")
         repaired1, noise1, mask1 = process_fits_simple(
-            input_file, method='outlier', threshold=4.0
+            input_file, method='outlier', threshold=0.8
         )
         
         # 使用热冷像素检测方法
         print("\n=== 方法2: 热冷像素检测 ===")
         repaired2, noise2, mask2 = process_fits_simple(
-            input_file, method='hot_cold', threshold=3.5
+            input_file, method='hot_cold', threshold=0.8
         )
         
         print(f"\n✅ 所有处理完成!")
